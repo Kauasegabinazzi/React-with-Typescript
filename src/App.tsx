@@ -3,6 +3,7 @@ import Container from './components/container';
 import Title from './components/container/title';
 import Footer from './components/footer';
 import Header from './components/header';
+import Tabela from './components/table';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header></Header>
       <Container>
         <Title>Área Administrativa</Title>
+        <Tabela></Tabela>
       </Container>
       <Footer></Footer>
     </>
