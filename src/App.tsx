@@ -2,6 +2,7 @@ import './App.css';
 import Container from './components/container';
 import Title from './components/container/title';
 import Footer from './components/footer';
+import Grafico from './components/grafics';
 import Header from './components/header';
 import Tabela from './components/table';
 import UseDadosConsulta from './UseDadosConsulta';
@@ -16,6 +17,7 @@ function App() {
         <Tabela consultas={dados}></Tabela>
       </Container>
       <Footer></Footer>
+      <Grafico></Grafico>
     </>
   );
 }
