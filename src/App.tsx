@@ -9,10 +9,10 @@ import UseDadosConsulta from './UseDadosConsulta';
 import UseDadosProficional from './UseDadosProficional';
 
 function App() {
-  const { dados: consultas, erro: ConsultasErro} = UseDadosConsulta();
-  const {dados: proficionais, erro: proficionaisErro} = UseDadosProficional();
+  const { dados: consultas, erro: ConsultasErro } = UseDadosConsulta();
+  const { dados: proficionais, erro: proficionaisErro } = UseDadosProficional();
 
-  if(ConsultasErro || proficionaisErro){
+  if (ConsultasErro || proficionaisErro) {
     console.log('erro');
   }
   return (
@@ -23,7 +23,7 @@ function App() {
         <Tabela consultas={consultas}></Tabela>
       </Container>
       <Footer></Footer>
-        <Grafico proficionais={proficionais} consultas={consultas}></Grafico>
+      <Grafico consultas={consultas} profissionais={proficionais}></Grafico>
     </>
   );
 }
