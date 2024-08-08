@@ -6,18 +6,24 @@ import Grafico from './components/grafics';
 import Header from './components/header';
 import Tabela from './components/table';
 import UseDadosConsulta from './UseDadosConsulta';
+import UseDadosProficional from './UseDadosProficional';
 
 function App() {
-  const { dados, erro } = UseDadosConsulta();
+  const { dados: consultas, erro: ConsultasErro} = UseDadosConsulta();
+  const {dados: proficionais, erro: proficionaisErro} = UseDadosProficional();
+
+  if(ConsultasErro || proficionaisErro){
+    console.log('erro');
+  }
   return (
     <>
       <Header></Header>
       <Container>
         <Title>Área Administrativa</Title>
-        <Tabela consultas={dados}></Tabela>
+        <Tabela consultas={consultas}></Tabela>
       </Container>
       <Footer></Footer>
-      <Grafico></Grafico>
+        <Grafico proficionais={proficionais} consultas={consultas}></Grafico>
     </>
   );
 }
