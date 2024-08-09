@@ -1,4 +1,5 @@
 import './App.css';
+import Avaliacao from './components/assessment';
 import Container from './components/container';
 import Title from './components/container/title';
 import Footer from './components/footer';
@@ -24,6 +25,7 @@ function App() {
       </Container>
       <Footer></Footer>
       <Grafico consultas={consultas} profissionais={proficionais}></Grafico>
+      <Avaliacao></Avaliacao>
     </>
   );
 }
