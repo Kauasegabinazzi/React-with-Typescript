@@ -1,13 +1,21 @@
+import styled from "@emotion/styled";
 import Iproficional from "../../types/Iproficional";
 import Card from "./card";
 
-function Avaliacao({profissionais} : {profissionais: Iproficional[] | null}){
+const SectionStyled = styled.section`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%; 
+`
+
+function Avaliacao({ profissionais }: { profissionais: Iproficional[] | null }) {
     return (
-        <section>
+        <SectionStyled>
             {profissionais?.map((profissional) => {
                 return <Card profissional={profissional}></Card>
             })}
-        </section>
+        </SectionStyled>
     )
 }
 
