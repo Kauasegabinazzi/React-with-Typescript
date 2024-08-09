@@ -25,7 +25,7 @@ function App() {
       </Container>
       <Footer></Footer>
       <Grafico consultas={consultas} profissionais={proficionais}></Grafico>
-      <Avaliacao></Avaliacao>
+      <Avaliacao profissionais={proficionais}></Avaliacao>
     </>
   );
 }
